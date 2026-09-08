@@ -130,3 +130,112 @@ h1,h2,h3,h4,p{margin-top:0}h1,h2,h3,h4{letter-spacing:-.025em}p{line-height:1.65
 .criterion-evidence-array p{padding:5px 0;border-bottom:1px dashed var(--line)}.criterion-evidence-array p:last-child{border-bottom:0}
 @media(max-width:1180px){.lecturer-assessment-grid{grid-template-columns:1fr}.assessment-evidence-panel{position:static;max-height:none}}
 @media(max-width:700px){.rubric-score-head{grid-template-columns:1fr}}
+
+/* =========================================================
+   METOPEN PFIS v1.0.10 — FINAL MPF WYSIWYG OVERRIDE
+   Keep this block at the END of globals.css.
+   Reason: legacy duplicate rich-editor rules above can override
+   the MPF blue editor styling because of CSS source order.
+   ========================================================= */
+.rich-editor-shell{
+  --teal:#075EA8;
+  --teal-2:#08A8C6;
+  --line:rgba(7,94,168,.13);
+  --ink:#153552;
+  --muted:#61768A;
+  border:1px solid rgba(7,94,168,.20);
+  background:rgba(255,255,255,.96);
+  border-radius:17px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(7,72,128,.06);
+}
+.rich-editor-shell .rich-toolbar{
+  display:flex;
+  gap:4px;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:7px;
+  background:linear-gradient(180deg,#FBFDFF,#EDF7FD);
+  border-bottom:1px solid rgba(7,94,168,.13);
+  position:sticky;
+  top:0;
+  z-index:4;
+}
+.rich-editor-shell .rt-btn{
+  width:32px;
+  height:32px;
+  border:0;
+  background:transparent;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  color:#506B80;
+}
+.rich-editor-shell .rt-btn:hover,
+.rich-editor-shell .rt-btn.active{
+  background:#DDF2FF;
+  color:#075EA8;
+}
+.rich-editor-shell .rt-btn svg{width:15px;height:15px}
+.rich-editor-shell .rt-text{font-size:.62rem;font-weight:900}
+.rich-editor-shell .rt-select{
+  height:32px;
+  border:1px solid rgba(7,94,168,.15);
+  border-radius:9px;
+  background:#fff;
+  padding:0 7px;
+  font-size:.7rem;
+  color:#153552;
+}
+.rich-editor-shell .rt-sep{
+  width:1px;
+  height:22px;
+  background:rgba(7,94,168,.13);
+  margin:0 2px;
+}
+.rich-editor-shell .rt-word{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  margin-left:auto;
+  font-size:.65rem;
+  color:#61768A;
+}
+.rich-editor-shell .tiptap-content{
+  outline:none;
+  padding:15px;
+  line-height:1.7;
+  background:#fff;
+  color:#153552;
+}
+.rich-editor-shell .tiptap-content:focus{
+  box-shadow:inset 0 0 0 2px rgba(7,94,168,.06);
+}
+.rich-editor-shell .tiptap-content p{margin:.55em 0}
+.rich-editor-shell .tiptap-content h1,
+.rich-editor-shell .tiptap-content h2,
+.rich-editor-shell .tiptap-content h3{color:#075EA8}
+.rich-editor-shell .tiptap-content blockquote{
+  border-left:3px solid #F5B21A;
+  margin-left:0;
+  padding-left:12px;
+  color:#526B80;
+}
+.rich-editor-shell .tiptap-content table{border-collapse:collapse;width:100%}
+.rich-editor-shell .tiptap-content th,
+.rich-editor-shell .tiptap-content td{
+  border:1px solid #D6E6F2;
+  padding:7px;
+  min-width:80px;
+}
+.rich-editor-shell .tiptap-content th{background:#EAF5FF;color:#153552}
+.rich-editor-shell .tiptap-content img{max-width:100%;border-radius:12px}
+.rich-editor-shell .tiptap-content ul[data-type="taskList"]{list-style:none;padding-left:0}
+.rich-editor-shell .tiptap-content ul[data-type="taskList"] li{display:flex;gap:8px}
+.rich-editor-shell .ProseMirror p.is-editor-empty:first-child::before{
+  color:#91A6B8;
+  content:attr(data-placeholder);
+  float:left;
+  height:0;
+  pointer-events:none;
+}
